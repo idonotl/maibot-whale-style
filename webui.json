@@ -1,0 +1,60 @@
+{
+  "schema_version": 2,
+  "required_capabilities": [
+    "declarative_basic"
+  ],
+  "workspace_title": "小鲸鱼表达学习",
+  "pages": [
+    {
+      "id": "overview",
+      "title": "已学表达",
+      "description": "按置信度列出学到的表达规律。",
+      "placement": "workspace",
+      "icon": "list",
+      "mode": "declarative",
+      "poll_interval_seconds": 0,
+      "queries": {
+        "stats": {
+          "api": "style_stats",
+          "version": "1"
+        }
+      },
+      "content": [
+        {
+          "type": "grid",
+          "label": "统计",
+          "columns": 3,
+          "children": [
+            {
+              "type": "stat",
+              "label": "规则数",
+              "value": {
+                "scope": "query",
+                "source": "stats",
+                "field": "rules"
+              }
+            },
+            {
+              "type": "stat",
+              "label": "素材数",
+              "value": {
+                "scope": "query",
+                "source": "stats",
+                "field": "samples"
+              }
+            },
+            {
+              "type": "stat",
+              "label": "被参考次数",
+              "value": {
+                "scope": "query",
+                "source": "stats",
+                "field": "uses"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

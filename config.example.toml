@@ -1,0 +1,10 @@
+[plugin]
+config_version = "0.1.0"
+enabled = false
+inject_enabled = false
+max_rules_per_reply = 2
+min_confidence = 0.35
+user_weight = 1.0
+browse_weight = 0.4
+learn_cooldown_minutes = 10
+learn_daily_max = 6
